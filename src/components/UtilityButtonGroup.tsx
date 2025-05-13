@@ -28,9 +28,9 @@ const buttons = [
 ]
 export default function UtilityButtonGroup({}: Props) {
   return (
-    <div className='flex gap-4 items-center my-4'>
+    <div className='flex gap-4 text-xs items-center my-4 overflow-x-scroll '>
         {buttons.map((btn,i) => (
-            <Button key={i} title={btn.title} icon={btn.icon} className='px-4 not-first:bg-[#FFFFFF]/10' />
+            <Button key={i} title={btn.title} icon={btn.icon} className='px-4 not-first:bg-[#FFFFFF]/10 ' />
         ))
         }
     </div>

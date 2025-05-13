@@ -10,8 +10,8 @@ type Props = {
 
 export default function Button({title,onClick,icon,className}: Props) {
   return (
-    <button onClick={onClick} className={cn("bg-[#FFFFFF]/20 rounded-lg p-1 h-[36px] w-fit flex items-center justify-center cursor-pointer",className)}>
-        <span>
+    <button onClick={onClick} className={cn("bg-[#FFFFFF]/20 rounded-lg p-1 h-[36px] w-fit flex items-center justify-center cursor-pointer whitespace-nowrap",className)}>
+        <span className='shrink-0'>
         {icon}
         </span>
 

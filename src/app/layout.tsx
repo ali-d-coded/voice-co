@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sourceSerif4.variable} ${inter.variable} antialiased relative`}
+        className={`${sourceSerif4.variable} ${inter.variable} antialiased relative bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.1),transparent_100%)]`}
       >
         {/* <Spotlight fill="#ffffff11" className="rotate-[95deg] h-[120%]" /> */}
         <NavBar />
