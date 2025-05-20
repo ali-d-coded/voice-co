@@ -1,4 +1,5 @@
-import { button, li } from 'motion/react-client'
+import { button, div, li } from 'motion/react-client'
+import Image from 'next/image'
 import React from 'react'
 
 
@@ -47,7 +48,7 @@ export default function PricingPage() {
     <section className='grid gap-2 w-full '>
         {
             pricing.map(price => (
-                <div key={price.id} className='bg-white/5 border border-white/10 rounded-[24px] p-4 min-h-[226px]  flex flex-col '>
+                <div key={price.id} className='bg-white/5 border border-white/10 rounded-[24px] p-4 min-h-[226px]  flex flex-col relative'>
                     
                     <div className='font-serif-4 flex justify-between text-3xl my-2'> 
                         <span className='text-3xl'>
@@ -63,7 +64,7 @@ export default function PricingPage() {
                         <ul className='leading-10'>
                             {
                                 price.features.map(fe => (
-                                    <li>
+                                    <li key={fe}>
                                         {fe}
                                     </li>
 
@@ -72,6 +73,20 @@ export default function PricingPage() {
                         </ul>
 
 
+                    </div>
+                    <div className='flex mt-5 sm:absolute sm:right-2 sm:bottom-3 '>
+                        {
+                            price.tag == 'Free' ? (
+                                <button className='bg-white/20 rounded-4xl py-2 px-3 '>
+                                    Start Free
+                                </button>
+                            ) : (
+                                <button className='bg-white text-black rounded-4xl py-2 px-3 font-semibold flex gap-1 shrink-0'>
+                                    <Image src={"/crown.svg"} width={20} height={20} alt='crown' />
+                                    Upgrade to Pro
+                                </button>
+                            )
+                        }
                     </div>
 
                
